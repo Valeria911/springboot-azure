@@ -35,7 +35,7 @@ azurewebapp {
     subscription = 'e5b01286-31ba-40e5-b6ac-3ae7c29a3d28'
     resourceGroup = 'JavaAzure-group'
     appName = 'sb-azure'
-    pricingTier = 'Free'
+    pricingTier = 'Azure Plan'
     region = 'Central US'
     runtime {
         os = 'Windows'
