@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.6.4'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'com.microsoft.azure.azurewebapp' version '1.1.0'
 }
 
 group = 'cl.globant'
@@ -28,4 +29,18 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+azurewebapp {
+    subscription = 'e5b01286-31ba-40e5-b6ac-3ae7c29a3d28'
+    resourceGroup = 'JavaAzure-group'
+    appName = 'sb-azure'
+    pricingTier = 'Free'
+    region = 'Central US'
+    runtime {
+        os = 'Windows'
+        webContainer = 'Java SE'
+        javaVersion = 'Java 11'
+    }
+
 }
